@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="products">
+        <article>
+          <h2>PRODUCTNAME</h2>
+          <figure>
+            <img src="IMGSRC" alt="PRODUCTNAME" />
+            <figcaption>PRODUCTDESCRIPTION</figcaption>
+          </figure>
+          <p>PRICE</p>
+          <button data-id="ID">Add item</button>
+        </article>
+        <article>
+          <h2>PRODUCTNAME</h2>
+          <figure>
+            <img src="IMGSRC" alt="PRODUCTNAME" />
+            <figcaption>PRODUCTDESCRIPTION</figcaption>
+          </figure>
+          <p>PRICE</p>
+          <button data-id="ID">Add item</button>
+        </article>
+        <article>
+          <h2>PRODUCTNAME</h2>
+          <figure>
+            <img src="IMGSRC" alt="PRODUCTNAME" />
+            <figcaption>PRODUCTDESCRIPTION</figcaption>
+          </figure>
+          <p>PRICE</p>
+          <button data-id="ID">Add item</button>
+        </article>
+        <article>
+          <h2>PRODUCTNAME</h2>
+          <figure>
+            <img src="IMGSRC" alt="PRODUCTNAME" />
+            <figcaption>PRODUCTDESCRIPTION</figcaption>
+          </figure>
+          <p>PRICE</p>
+          <button data-id="ID">Add item</button>
+        </article>
+      </section>
+      <button class="cart-icon">
+        <img
+          src="https://image.freepik.com/free-icon/fill-cart-online-shoping_318-9875.jpg"
+          alt=""
+        />
+        <p>Cart</p>
+      </button>
+      <aside class="cart">
+        <form action="#">
+          <div class="cart-content">
+            <div class="cart-item">
+              <label for="NAME">NAME</label>
+              <input id="ITEM-ID" type="number" name="NAME" min="0" max="10" />
+              <p>DKK<span class="price-row">600</span></p>
+              <p>DKK<span class="price-each">300</span></p>
+            </div>
+            <div class="cart-item">
+              <label for="NAME">NAME</label>
+              <input id="ITEM-ID" type="number" name="NAME" min="0" max="10" />
+              <p>DKK<span class="price-row">600</span></p>
+              <p>DKK<span class="price-each">300</span> each</p>
+            </div>
+          </div>
+          <!-- END .cart-content  -->
+          <button type="submit">Checkout & pay</button>
+        </form>
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
