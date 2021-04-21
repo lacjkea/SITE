@@ -28,12 +28,13 @@ const CART = {
   init() {
     let _contents = localStorage.getItem(CART.KEY);
     console.log(_contents);
-    console.log(_contents.length);
-    if (_contents.length > 2) {
+    //console.log(_contents.length);
+    if (_contents) {
       //turn it into JS objects
       CART.contents = JSON.parse(_contents);
     } else {
       //dummy JS test data
+      //here we'd handle an empty cart??
       CART.contents = [
         { id: 1, title: "Apple", qty: 2, price: 0.85 },
         { id: 2, title: "Banana", qty: 1, price: 0.35 },
@@ -41,13 +42,17 @@ const CART = {
       ];
     }
     CART.sync();
+    document.querySelector("#clearcart").addEventListener("click", function () {
+      localStorage.clear(); //this will clear all localStorage
+      CART.init();
+    });
     // this.updateDOM();
     // CART.updateDOM();
   },
   sync() {
     let _cart = JSON.stringify(CART.contents);
     localStorage.setItem(CART.KEY, _cart);
-    alert("hey");
+    // alert("hey");
     CART.updateDOM();
   },
   updateDOM() {

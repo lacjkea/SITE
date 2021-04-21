@@ -45,6 +45,8 @@ img {
   left: 95vw;
   transition: all 0.2s;
   width: 90vw;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .cart-item {
@@ -61,7 +63,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type="number"] {
-  -moz-appearance: textfield;
+  /* -moz-appearance: textfield; */
   text-align: center;
   width: 6ch;
   display: block;
@@ -71,14 +73,16 @@ input[type="number"] {
 @media only screen and (max-width: 500px) {
   .cart.show {
     transform: translateX(-90vw);
-    width: 90vw;
+    /* width: 90vw; */
   }
 }
 
 @media only screen and (min-width: 500px) {
   .cart {
-    position: static;
-    width: revert;
+    /* position: static; */
+    width: calc(100% / 3 - 1rem / 3);
+    left: revert;
+    right: 0;
   }
   /* .cart.show {
     transform: revert;
