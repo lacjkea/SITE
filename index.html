@@ -65,11 +65,27 @@
         />
         Cart
       </button>
+      <template id="cart-item-template">
+        <div class="cart-item">
+          <label for="NAME">NAME</label>
+          <input
+            onfocus="this.select()"
+            id="id-"
+            type="number"
+            name="NAME"
+            min="0"
+            max="30"
+            maxlength="2"
+          />
+          <p>DKK<span class="price-row">600</span></p>
+          <p>DKK<span class="price-each">300</span></p>
+        </div>
+      </template>
       <aside class="cart">
-        <form action="#">
+        <form action="">
           <div class="cart-content">
             <h2>The cart is empty</h2>
-            <div class="cart-item">
+            <!-- <div class="cart-item">
               <label for="NAME">NAME</label>
               <input id="ITEM-ID" type="number" name="NAME" min="0" max="10" />
               <p>DKK<span class="price-row">600</span></p>
@@ -80,7 +96,7 @@
               <input id="ITEM-ID" type="number" name="NAME2" min="0" max="10" />
               <p>DKK<span class="price-row">600</span></p>
               <p>DKK<span class="price-each">300</span> each</p>
-            </div>
+            </div> -->
           </div>
           <!-- END .cart-content  -->
           <button type="submit">Checkout & pay</button>
